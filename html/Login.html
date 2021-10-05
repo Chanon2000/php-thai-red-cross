@@ -1,0 +1,75 @@
+<!-- <?php session_start();?> -->
+<!doctype html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Form Login</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <link rel="stylesheet" href="../css/bootstrap.min.css" 
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+      crossorigin="anonymous">
+      <style>
+        body{
+            max-width: 1200px;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(175, 45, 22);
+        }
+        #login,#username,#password{
+          color:white;
+        }
+      </style>
+    </head> 
+    <body>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="HomePage.html">
+                <img src="../img/qqq.png" width="150" height="120" sizes="110px" alt="aa">
+              </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="HomePage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="DonorForm.html">Donate Blood</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Login.html">Login<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div  class='container'>
+        <h1 id="login" class="mt-5">Login</h1>
+        <hr>
+        <form name="frmlogin" method="post" action="../php/check_login.php" >
+
+            <div class="mb-3">
+                <label id="username" for="username" class='form-label'>User Name</label>
+                <input type="text" class="form-control" id="Username" name="Username" placeholder="Your username.." style="width: 500px;">
+                <span id='usernameavailable'></span>
+            </div>
+
+            <div class="mb-3">
+                <label id="password" for="password" class='form-label'>Password</label>
+                <input type="password" class="form-control" id="Password" name="Password" placeholder="Your password.." style="width: 500px;">
+            </div>
+
+            <button type="submit" name='Login' class="btn btn-success">Login</button>
+            <a href="RegisterEmployee.html" class="btn btn-primary">Go to Register</a>
+            <a href="HomePage.html" class="btn btn-primary">Back to HomePage</a>
+        </form>
+    </div>
+</body>
+</html>
+
+

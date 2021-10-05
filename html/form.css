@@ -1,0 +1,61 @@
+/* #submit,#reset{
+    font: normal 16px / 20px "Athiti", Helvetica, Arial, Verdana, sans-serif;
+    display: inline-block;
+    padding: 10px;
+    background-color: #FF0000;
+    width: 70px;
+    text-align: center;
+    color: #ffffff;
+  } */
+
+  div {
+    border-radius: 5px;
+    /* background-color: rgb(175, 45, 22); */
+    padding: 20px;
+  }
+
+  strong,label,h2{
+    color: #85C1E9;
+  }
+
+
+
+
+  input[type=text], input[type=password], input[type=number], input[type="date"], input[type="datetime"], input[type="textarea"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+   }
+
+   /* body {
+    width: 700px;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+   }
+
+   label, h2{
+       color: white;
+   } */
+
+   #NIN {
+      width: 500px;
+   }
+   #fname,#lname,#Cdisease,#email,#PhoneNumber,#other,#username,#password{
+    width: 400px;
+   }
+   #Address{
+    width: 400px; 
+    height: 100px;
+   }
+
+
+  

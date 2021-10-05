@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DonorForm</title>
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" 
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+      crossorigin="anonymous">
+    <style>
+        body{
+            max-width: 1200px;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(175, 45, 22);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="HomePage.html">
+                <img src="../img/qqq.png" width="150" height="120" sizes="110px" alt="aa">
+              </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="HomePage.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="DonorForm.html">Donate Blood
+                    <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div>
+    <form action="../php/DonorInsert.php" >
+        <h2>กรอกข้อมูลผู้บริจาค</h2>
+        <!--start ข้อมูลส่วนตัว-->
+        <!--NIN-->
+        <label for="NIN"><strong>เลขที่บัตรประชาชน:</strong></label>
+        <input id="NIN" class="form-control" type="text" name="NIN" placeholder="เลขที่บัตรประชาชนของคุณ..."/></br>
+
+        <!--name-->
+        <label for="fname"><strong>First Name:</strong></label>
+        <input id="fname" class="form-control" type="text" name="fname" placeholder="Your Firstname..." /></br>
+        <label for="lname"><strong>Last Name:</strong></label>
+        <input id="lname" class="form-control" type="text" name="lname" placeholder="Your Lastname..." /></br>
+
+        <!--sex-->
+        <label for="sex"><strong>เพศ:</strong></label>
+        <label for="sex">ชาย:</label>
+        <input id="sexM" type="radio" name="sex" value="0"/>
+        <label for="sex">หญิง:</label>
+        <input id="sexF" type="radio" name="sex" value="1"/></br>
+
+        <!--อายุ-->
+        <label for="age"><strong>อายุ:</strong></label>
+        <input id="age" class="form-control" type="text" name="age" placeholder="Your Age..." style="width: 100px;"/></br>
+
+        <!--brithday-->
+        <label for="brithday"><strong>วันเดือนปีเกิด:</strong></label>
+        <input id="brithday" class="form-control" type="date" name="brithday" placeholder="Your brithday..." style="width: 200px;"/></br>
+
+        <!--Cdisease-->
+        <label for="Cdisease"><strong>โรคประจำตัว:</strong></label>
+        <input id="Cdisease" class="form-control" type="textarea" name="Cdisease" placeholder="โรคประจำตัว..." /></br>
+
+        <!--Bgroup-->
+        <label for="Bgroup"><strong>หมู่เลือด:</strong></label>
+        <label for="BgroupA">A:</label>
+        <input id="BgroupA" type="radio" name="Bgroup" value="A"/>
+        <label for="BgroupB">B:</label>
+        <input id="BgroupB" type="radio" name="Bgroup" value="B"/>
+        <label for="BgroupO">O:</label>
+        <input id="BgroupO" type="radio" name="Bgroup" value="O"/>
+        <label for="BgroupAB">AB:</label>
+        <input id="BgroupAB" type="radio" name="Bgroup" value="AB"/></br>
+
+        <!--Weight-->
+        <label for="Weight"><strong>นำ้หนัก:</strong></label>
+        <input id="Weight" class="form-control" type="text" name="weight" style="width: 100px;"/>
+        <label for="Weight">กิโลกรัม</label></br>
+
+        <!--Address-->
+        <label for="Address"><strong>สถานที่ที่ติดต่อได้:</strong></label>
+        <input id="Address" class="form-control" type="textarea" name="Address" ></br>
+
+        <!--PNumber-->
+        <label for="PhoneNumber"><strong>หมายเลขโทรศัพท์:</strong></label>
+        <input id="PhoneNumber" class="form-control" type="text" name="PhoneNumber" placeholder="Your PhoneNumber..." ></br>
+
+        <!--E-mail-->
+        <label for="email"><strong>E-mail address:</strong></label>
+        <input id="email" class="form-control" type="text" name="email" placeholder="Your Email..." ></br>
+
+        <!--อาชีพ-->
+        <label for="Career"><strong>อาชีพ:</strong></label>
+        <label for="student">นักเรียน,นักศึกษา:</label>
+        <input id="student" type="radio" name="career" value="นักเรียนนักศึกษา"/>
+        <label for="official">ข้าราชการ,ทหาร,ตำรวร,พนักงานรัฐวิสาหกิจ:</label>
+        <input id="official" type="radio" name="career" value="ข้าราชการ"/>
+        <label for="employee">พนักงานบริษัท,รับจ้าง:</label>
+        <input id="employee" type="radio" name="career" value="รับจ้าง"/>
+        <label for="Monk">พระภิกษุ,สามเฌร:</label>
+        <input id="Monk" type="radio" name="career" value="พระภิกษุ"/></br>
+        <label for="other">อื่นๆ:</label>
+        <input id="other" type="text" name="career" placeholder="Your career..." /></br>
+
+        <!--End ข้อมูลส่วนตัว-->
+        
+        <!--Strat ปุ่ม-->
+        <!-- <input id="submit" type="submit" value="ส่ง" > -->
+        <button type="submit" id="submit" class="btn btn-success">ยืนยัน</button>
+        <!-- <input id="reset" type="reset" value="เคลียร์"> -->
+        <button type="reset" id="reset" class="btn btn-secondary">เคลียร์</button>
+        <a href="HomePage.html" class="btn btn-primary">Back to HomePage</a>
+        <!--End ปุ่ม-->
+    </form>
+    </div>
+</body>
+</html>

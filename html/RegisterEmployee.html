@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+    crossorigin="anonymous">
+      <link rel="stylesheet" href="form.css" />
+      <style>
+        body{
+            max-width: 1200px;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: rgb(175, 45, 22);
+        }
+      </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="HomePage.html">
+            <img src="../img/qqq.png" width="150" height="120" sizes="110px" alt="aa">
+          </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="RegisterEmployee.html">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div>
+        <form action="http://localhost:8080/The_Thai_Red_Cross/php/EmployeeInsert.php">
+            <h2>EmployeeRegister</h2>
+            <!--start ข้อมูล-->
+            <!--Username-->
+            <label for="Username"><strong>Username:</strong></label>
+            <input id="username"  type="text" name="Username" placeholder="Your username.." style="width: 400px;"></br>
+
+            <!--Password-->
+            <label for="Password"><strong>Password:</strong></label>
+            <input id="password"  type="password" name="Password" placeholder="Your password.." style="width: 400px;"></br>
+
+            <!--Name-->
+            <label for="EmployeeName"><strong>Firstname:</strong></label>
+            <input id="fname"  type="text" name="fname" placeholder="Your firstname.."></br>
+            <label for="EmployeeName"><strong>Lastname:</strong></label>
+            <input id="lname"  type="text" name="lname" placeholder="Your lastname.."></br>
+
+            <!--sex-->
+            <label for="sex"><strong>Sex:</strong></label>
+            <input id="sexM" type="radio" name="sex" value="0">
+            <label for="sexM">Male</label>
+            <input id="sexF" type="radio" name="sex" value="1">
+            <label for="sexF">Female</label></br>
+            
+
+            <!--Age-->
+            <label for="Age"><strong>Age:</strong></label>
+            <input id="Age"  type="number" name="Age" placeholder="Your Age..." style="width: 120px;"></br>
+
+            <!--Address-->
+            <label for="Address"><strong>สถานที่ที่ติดต่อได้:</strong></label>
+            <input id="Address"  type="text" name="Address" placeholder="Your Address..."></br>
+
+            <!--PhoneNumber-->
+            <label for="PhoneNumber"><strong>เบอร์โทรศัพท์:</strong></label>
+            <input id=PhoneNumber  type="text" name="PhoneNumber" placeholder="Your PhoneNumber..."></br>
+
+            <!--type_ID-->
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="type_ID"><strong>ตำแหน่ง: </strong></label>
+              <input class="form-check-input" id="officerTRC" type="radio" name="type_ID" value="0">
+              <label class="form-check-label" for="officerTRC">Officer</label>
+              <input class="form-check-input" id="Doctor" type="radio" name="type_ID" value="1">
+              <label class="form-check-label" for="Doctor">Doctor</label>
+            </div>
+
+            <!--End ข้อมูล-->
+          </br>
+            <label for="StartDate"><strong>วันที่เริ่มทำงาน:</strong></label>
+            <input id="StartDate"  type="date" name="StartDate" placeholder="วันที่เริ่มทำงาน" style="width: 400px;"></br>
+            
+            <!--Strat ปุ่ม-->
+            <!-- <input id="submit" type="submit" value="ส่ง" > -->
+            <button type="submit" id="submit" class="btn btn-success">ยืนยัน</button>
+            <!-- <input id="reset" type="reset" value="เคลียร์"> -->
+            <button type="reset" id="reset" class="btn btn-secondary">เคลียร์</button>
+            <a href="Login.html" class="btn btn-primary">Back to Login</a>
+            <a href="HomePage.html" class="btn btn-primary">Back to HomePage</a>
+            <!--End ปุ่ม-->
+        </form>
+    </div>
+</body>
+</html>
